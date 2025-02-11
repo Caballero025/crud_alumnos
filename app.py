@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hola_mundo():
     return 'Hola Mundo'
 @app.route('/alumnos')
-def hola_alumnos():
+def getAlumnos():
     return 'Aqui van los alumnos'
 
 if __name__ == '__main__':
