@@ -26,7 +26,7 @@ class Alumnos(db.Model):
             'ap_materno':self.ap_materno,
             'semestre':self.semestre,
         }
-
+ 
 
 #Ruta raiz
 @app.route('/')
