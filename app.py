@@ -54,5 +54,14 @@ def create_alumno():
      #Aqui sigue si es GET
      return render_template('create_alumno.html')
 
+#Eliminar alumno
+@app.route('/alumnos/delete/<string:no_control>')
+def delete_alumno(no_control):
+    alumno = Alumnos.query.get(no_control)
+    if alumno:
+        db.session.delete(alumno)
+        db.session.commit()
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
